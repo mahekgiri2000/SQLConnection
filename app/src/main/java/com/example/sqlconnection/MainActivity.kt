@@ -45,6 +45,13 @@ class MainActivity : AppCompatActivity() {
         bclear.setOnClickListener{
             clear()
         }
+
+//  EditText after clearText()
+        if(rs.moveToNext()){
+            sname.setText(rs.getString(1))
+            ssmae.setText(rs.getString(2))
+        }
+
     }
     private fun clear(){
         sname.setText("")
