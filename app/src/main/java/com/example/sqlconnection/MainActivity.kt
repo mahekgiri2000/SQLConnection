@@ -41,5 +41,14 @@ class MainActivity : AppCompatActivity() {
         var helper = MySQLHelper(applicationContext)
         var db = helper.writableDatabase
         rs = db.rawQuery("SELECT SID _id,SNAME,SEM FROM STUDENTDATA", null)
+
+        bclear.setOnClickListener{
+            clear()
+        }
+    }
+    private fun clear(){
+        sname.setText("")
+        ssmae.setText("")
+        sname.requestFocus()
     }
 }
